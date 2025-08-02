@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Youtube, Users, Megaphone } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useToast } from '@/hooks/use-toast';
@@ -12,7 +12,7 @@ const GetInvolved = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     // Basic form validation
@@ -35,10 +35,31 @@ const GetInvolved = () => {
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+    });
+  };
+
+  const handleNewsletterSignup = () => {
+    toast({
+      title: "Newsletter Signup",
+      description: "Thank you for subscribing to our newsletter! You'll receive updates about environmental initiatives.",
+    });
+  };
+
+  const handleVolunteerSignup = () => {
+    toast({
+      title: "Volunteer Program",
+      description: "Thank you for your interest in volunteering! We'll contact you with upcoming opportunities.",
+    });
+  };
+
+  const handleAdvocacyNetwork = () => {
+    toast({
+      title: "Advocacy Network",
+      description: "Welcome to our advocacy network! You'll receive updates on policy initiatives and ways to take action.",
     });
   };
 
@@ -72,33 +93,42 @@ const GetInvolved = () => {
               <p className="text-muted-foreground mb-4">
                 Stay updated with the latest environmental news, solutions, and community initiatives.
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <button 
+                onClick={handleNewsletterSignup}
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+              >
                 Subscribe Now
               </button>
             </div>
             
             <div className="text-center p-6 border-2 border-accent/20 rounded-lg hover:border-accent/40 transition-colors">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Send className="h-8 w-8 text-accent" />
+                <Users className="h-8 w-8 text-accent" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Volunteer Program</h3>
               <p className="text-muted-foreground mb-4">
                 Join local environmental projects and make a hands-on difference in your community.
               </p>
-              <button className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors">
+              <button 
+                onClick={handleVolunteerSignup}
+                className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors"
+              >
                 Become a Volunteer
               </button>
             </div>
             
             <div className="text-center p-6 border-2 border-primary/20 rounded-lg hover:border-primary/40 transition-colors">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-8 w-8 text-primary" />
+                <Megaphone className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Advocacy Network</h3>
               <p className="text-muted-foreground mb-4">
                 Help spread awareness and advocate for environmental policies in your region.
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <button 
+                onClick={handleAdvocacyNetwork}
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+              >
                 Join Network
               </button>
             </div>

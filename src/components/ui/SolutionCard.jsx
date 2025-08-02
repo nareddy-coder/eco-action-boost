@@ -1,11 +1,4 @@
-interface SolutionCardProps {
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-}
-
-const SolutionCard = ({ title, description, image, alt }: SolutionCardProps) => {
+const SolutionCard = ({ title, description, image, alt }) => {
   return (
     <div className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="aspect-video overflow-hidden">

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SolutionCard from '@/components/ui/SolutionCard';
@@ -126,12 +127,12 @@ const Solutions = () => {
             begins with a single step.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/get-involved"
+            <Link 
+              to="/get-involved"
               className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Get Started
-            </a>
+            </Link>
             <a 
               href="mailto:solutions@rebootearth.org"
               className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"

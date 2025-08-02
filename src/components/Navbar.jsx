@@ -13,7 +13,7 @@ const Navbar = () => {
     { path: '/get-involved', label: 'Get Involved' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50">

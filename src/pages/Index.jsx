@@ -63,26 +63,26 @@ const Index = () => {
             Our Focus Areas
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <Globe className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Climate Action</h3>
-              <p className="text-muted-foreground">
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-primary/5 group cursor-pointer">
+              <Globe className="h-16 w-16 text-primary mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">Climate Action</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Leading initiatives to reduce carbon emissions and combat climate change 
                 through renewable energy and sustainable practices.
               </p>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <Heart className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Conservation</h3>
-              <p className="text-muted-foreground">
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-primary/5 group cursor-pointer">
+              <Heart className="h-16 w-16 text-primary mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">Conservation</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Protecting biodiversity and natural ecosystems through conservation 
                 efforts and sustainable resource management.
               </p>
             </div>
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <Users className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Community</h3>
-              <p className="text-muted-foreground">
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-primary/5 group cursor-pointer">
+              <Users className="h-16 w-16 text-primary mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">Community</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                 Building a global community of environmental advocates and empowering 
                 individuals to make a positive impact.
               </p>
